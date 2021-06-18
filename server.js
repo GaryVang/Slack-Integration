@@ -44,7 +44,7 @@ app.event('user_change', async ({ event, context, client }) => {
       }
 });
 
-app.event('message', async ({ event, context, client }) => {
+app.event('message', async ({ event, client }) => {
   // console.log("message: ");
   try {
       // Call chat.postMessage with the built-in client
@@ -59,7 +59,7 @@ app.event('message', async ({ event, context, client }) => {
     }
 });
 
-app.event('app_mention', async ({ event, context, client, say }) => {
+app.event('app_mention', async ({ event, say }) => {
     console.log("app_mention success: ", event);
   try {
     await say({"blocks": [
